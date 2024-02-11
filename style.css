@@ -31,3 +31,9 @@ body {
   height: 30vh;
   width: 100%;
 }
+
+.sidebar-menu {
+  background-color: #62929e;
+  padding: 1rem 5rem;
+  border: none;
+}
