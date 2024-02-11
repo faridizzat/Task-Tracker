@@ -85,6 +85,80 @@
     </div>
 
     <!-- main -->
-    <div class="col-10 main full-height"></div>
+    <div class="col-10 main full-height">
+      <div class="row">
+        <div class="col-5 mb-3">
+          <!-- header -->
+          <h2>Create New</h2>
+        </div>
+        <div class="col-10 border">
+          <!-- Form -->
+          <form>
+            <!-- Task Name -->
+            <div class="mb-3">
+              <label for="taskName" class="form-label">Task Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="taskName"
+                aria-describedby="taskName"
+              />
+              <div id="taskNameHelp" class="form-text">
+                Add the name of the task
+              </div>
+            </div>
+
+            <!-- Tag -->
+            <div class="mb-3">
+              <label for="tag" class="form-label">Tag</label>
+              <input
+                type="text"
+                class="form-control"
+                id="tag"
+                aria-describedby="tag"
+              />
+              <div id="tagHelp" class="form-text">
+                Add the tag related to the task, multiple tag is possible
+              </div>
+            </div>
+
+            <!-- Due Date -->
+
+            <div class="mb-3">
+              <label for="dueDate" class="form-label">Due Date</label>
+              <input type="date" name="dueDate" id="dueDate" />
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea
+                class="form-control"
+                name="description"
+                id="description"
+                cols="30"
+                rows="10"
+              ></textarea>
+
+              <div id="descriptionHelp" class="form-text">
+                Add requirement/action/current status of the task
+              </div>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1"
+                >Check me out</label
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
