@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Tracker - Create New</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style_new.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="row m-0 position-relative" style="height: 100%">
+      <div
+        class="col-md-3 side-bar d-flex flex-column justify-content-between p-3"
+      >
+        <div
+          class="d-flex flex-column justify-content-between"
+          style="min-height: 40vh"
+        >
+          <h1 class="display-5">
+            TASK <br />
+            TRACKER
+          </h1>
+          <form class="d-flex mb-3" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+          <div>
+            <div class="mb-3">
+              <a href="index_new.html">DASHBOARD</a>
+            </div>
+            <div class="mb-3">
+              <a href="#">TASK</a>
+            </div>
+            <div class="mb-3">
+              <a href="#">CALENDAR</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="mb-3">PROFILE</div>
+          <button class="btn btn-outline-primary mb-3">LOGOUT</button>
+        </div>
+      </div>
+
+      <div class="col-8 p-5" style="min-height: 100vh">
+        <div class="row">
+          <div class="col-5 mb-3">
+            <!-- header -->
+            <h2>Create New</h2>
+          </div>
+          <div class="col-10">
+            <!-- Form -->
+            <form>
+              <!-- Task Name -->
+              <div class="mb-3">
+                <label for="taskName" class="form-label">Task Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="taskName"
+                  name="taskName"
+                  aria-describedby="taskName"
+                />
+                <div id="taskNameHelp" class="form-text">
+                  Add the name of the task
+                </div>
+              </div>
+
+              <!-- Tag -->
+              <div class="mb-3">
+                <label for="tag" class="form-label">Tag</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="tag"
+                  name="tag"
+                  aria-describedby="tag"
+                />
+                <div id="tagHelp" class="form-text">
+                  Add the tag related to the task, multiple tag is possible
+                </div>
+              </div>
+
+              <!-- Due Date -->
+
+              <div class="mb-3">
+                <label for="dueDate" class="form-label">Due Date</label>
+                <input type="date" name="dueDate" id="dueDate" />
+              </div>
+
+              <!-- Description -->
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea
+                  class="form-control"
+                  name="description"
+                  id="description"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+
+                <div id="descriptionHelp" class="form-text">
+                  Add requirement/action/current status of the task
+                </div>
+              </div>
+
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="priority_flg"
+                  >Highest Priority</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
