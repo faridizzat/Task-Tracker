@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Tracker - Dashboard</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,107 +15,81 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="row m-0">
-    <!--Split side to two-->
-    <div
-      class="col-2 full-height sidebar d-flex flex-column justify-content-between align-items-start position-sticky"
-    >
-      <!--Logo + Nav in one flexbox / Logout + Profile in one flexbox-->
-
-      <!-- sidebar -->
-      <nav class="flex-column">
-        <div>
-          <!-- logo -->
-          <h1 class="logo">
+  <body>
+    <div class="row m-0 position-relative" style="height: 100%">
+      <div
+        class="col-md-3 side-bar d-flex flex-column justify-content-between p-3"
+      >
+        <div
+          class="d-flex flex-column justify-content-between"
+          style="min-height: 45vh"
+        >
+          <h1 class="display-5">
             TASK <br />
             TRACKER
           </h1>
-          <!-- Menu -->
-
-          <div class="list-group">
-            <a
-              href="index.html"
-              class="list-group-item list-group-item-action active pb-3 sidebar-menu"
-              aria-current="true"
-            >
-              Dashboard
-            </a>
-
-            <!-- task dropdown -->
-            <div class="list-group-item list-group-item-action sidebar-menu">
-              <div class="dropdown">
-                <div
-                  class=".sidebar-button dropdown-toggle ps-0"
-                  type="button"
-                  id="taskDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Task
-                </div>
-                <ul class="dropdown-menu" aria-labelledby="taskDropdown">
-                  <li>
-                    <a class="dropdown-item" href="task.html">Create New</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Read/Update/Delete</a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">View All</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- calendar -->
-            <a
-              class="list-group-item list-group-item-action sidebar-menu"
-              href="#"
-              >Calendar</a
-            >
-          </div>
-        </div>
-      </nav>
-      <!-- Logout button -->
-      <div>
-        <h4>Profile</h4>
-        <h4>Logout</h4>
-      </div>
-    </div>
-
-    <!-- main -->
-    <div class="col-10 main full-height">
-      <div class="row">
-        <div class="col-5">
-          <!-- header -->
+          <form class="d-flex mb-3" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
           <div>
-            <h2>Welcome Home,<br />Farid!</h2>
-            <h5>Let's clear some tasks today!</h5>
+            <div class="mb-3 menu">
+              <a href="#">DASHBOARD</a>
+            </div>
+            <div class="mb-3 menu">
+              <a href="task_all.html">TASK</a>
+            </div>
+            <div class="mb-3 menu">
+              <a href="#">CALENDAR</a>
+            </div>
           </div>
         </div>
-        <!-- button-create-new -->
-        <div class="offset-5 col-2 px-5">
-          <button class="btn btn-success mt-3">
-            <a class="dropdown-item" href="task.html">Create New</a>
-          </button>
+        <div>
+          <div class="mb-3">PROFILE</div>
+          <button class="btn btn-outline-primary mb-3">LOGOUT</button>
         </div>
       </div>
 
-      <!-- performance -->
-      <div class="mb-5 block-meter border border-primary text-center fs-1">
-        WIP
-      </div>
-      <!-- cards-container -->
-      <div class="m-1">
+      <!-- MAIN -->
+      <div class="col-12 col-md-8 p-5" style="min-height: 100vh">
         <div class="row">
-          <!-- cards -->
-          <div class="card col-2 mx-2 my-2" style="width: 30rem; height: 21rem">
+          <div class="col-5 mb-3">
+            <!-- header -->
+            <h2 class="display-5">
+              Welcome Back <br />
+              Farid
+            </h2>
+          </div>
+          <!-- create new button -->
+          <div class="col-10 mb-3">
+            <button class="btn btn-success">
+              <a href="task_new.html">Create New</a>
+            </button>
+          </div>
+          <!-- Content -->
+          <div class="col-10">EXPIRED in 3 DAYS</div>
+          <!-- Cards -->
+          <div class="card col-12 my-2" style="width: 100wh; height: auto">
             <div class="card-body">
               <div class="mb-2">
-                <button class="btn btn-primary">Tag</button>
-                <button class="btn btn-secondary">Tag</button>
-                <button class="btn btn-warning">Tag</button>
+                <button class="btn btn-primary tag">Tag</button>
+                <button class="btn btn-secondary tag">Tag</button>
+                <button class="btn btn-warning tag">Tag</button>
               </div>
               <h5 class="card-title">Task Name</h5>
               <p class="card-text">
@@ -134,57 +107,6 @@
               <small class="text-body-secondary">Last updated 3 mins ago</small>
             </div>
           </div>
-          <!-- end of cards -->
-          <!-- cards -->
-          <div class="card col-2 mx-2 my-2" style="width: 30rem; height: 21rem">
-            <div class="card-body">
-              <div class="mb-2">
-                <button class="btn btn-primary">Tag</button>
-                <button class="btn btn-secondary">Tag</button>
-                <button class="btn btn-warning">Tag</button>
-              </div>
-              <h5 class="card-title">Task Name</h5>
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
-                dicta eaque totam inventore officiis optio quisquam obcaecati
-                numquam, ratione officia quibusdam mollitia tempore deleniti
-                perferendis unde consequuntur ipsam maiores aperiam?
-              </p>
-              <div class="d-flex flex-direction-row justify-content-between">
-                <a class="btn btn-primary" href="#" role="button">View</a>
-                <button class="btn btn-success">Close Complete</button>
-              </div>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-          <!-- end of cards -->
-          <!-- cards -->
-          <div class="card col-2 mx-2 my-2" style="width: 30rem; height: 21rem">
-            <div class="card-body">
-              <div class="mb-2">
-                <button class="btn btn-primary">Tag</button>
-                <button class="btn btn-secondary">Tag</button>
-                <button class="btn btn-warning">Tag</button>
-              </div>
-              <h5 class="card-title">Task Name</h5>
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
-                dicta eaque totam inventore officiis optio quisquam obcaecati
-                numquam, ratione officia quibusdam mollitia tempore deleniti
-                perferendis unde consequuntur ipsam maiores aperiam?
-              </p>
-              <div class="d-flex flex-direction-row justify-content-between">
-                <a class="btn btn-primary" href="#" role="button">View</a>
-                <button class="btn btn-success">Close Complete</button>
-              </div>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-          <!-- end of cards -->
         </div>
       </div>
     </div>
